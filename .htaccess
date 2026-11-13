@@ -1,0 +1,13 @@
+# Project-root .htaccess
+# Lets XAMPP serve the app from http://localhost/stockpilot-360/ while the
+# real web root is the "public" folder. Everything outside public/ stays unreachable.
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Send every request that is not already inside /public/ to /public/
+    RewriteCond %{REQUEST_URI} !(^|/)public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

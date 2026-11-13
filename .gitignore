@@ -1,0 +1,25 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+/vendor/
+
+# Runtime data (keep the folders, ignore the contents)
+/storage/logs/*
+/storage/reports/*
+/storage/uploads/*
+!/storage/logs/.gitkeep
+!/storage/reports/.gitkeep
+!/storage/uploads/.gitkeep
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Database dumps and backups
+*.sql.bak
+/backups/
