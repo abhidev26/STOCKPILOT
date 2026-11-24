@@ -52,3 +52,8 @@ if (Config::get('app.debug')) {
 }
 
 mb_internal_encoding('UTF-8');
+
+use App\Core\Security;
+
+// Start secure StockPilot session.
+Security::startSession();
